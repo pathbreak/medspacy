@@ -2,7 +2,7 @@
 from os import path
 # Filepath to default rules which are included in package
 from pathlib import Path
-from typing import Iterable, Union, Optional, Dict, Any, Set, Literal
+from typing import Iterable, Union, Optional, Dict, Any, Set
 
 from spacy.language import Language
 from spacy.tokens import Doc, Span
@@ -51,10 +51,8 @@ class ConText:
         max_targets: Optional[int] = None,
         prune_on_modifier_overlap: bool = True,
         prune_on_target_overlap: bool = False,
-        span_attrs: Union[
-            Literal["default"], Dict[str, Dict[str, Any]], None
-        ] = "default",
-        input_span_type: Union[Literal["ents", "group"]] = "ents",
+        span_attrs = "default",
+        input_span_type = "ents",
         span_group_name: str = "medspacy_spans",
     ):
         """

@@ -4,7 +4,7 @@ import warnings
 # Filepath to default rules which are included in package
 from os import path
 from pathlib import Path
-from typing import Union, Iterable, Optional, Dict, Any, Tuple, List, Literal, Set
+from typing import Union, Iterable, Optional, Dict, Any, Tuple, List, Set
 
 from spacy.language import Language
 from spacy.tokens import Span, Doc
@@ -66,11 +66,9 @@ class Sectionizer:
         require_start_line: bool = False,
         require_end_line: bool = False,
         newline_pattern: str = r"[\n\r]+[\s]*$",
-        input_span_type: Union[Literal["ents", "group"], None] = "ents",
+        input_span_type = "ents",
         span_group_name: str = "medspacy_spans",
-        span_attrs: Union[
-            Literal["default"], Dict[str, Dict[str, Any]], None
-        ] = "default",
+        span_attrs = "default",
     ):
         """
         Create a new Sectionizer component.

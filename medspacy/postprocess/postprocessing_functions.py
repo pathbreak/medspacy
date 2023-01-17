@@ -193,7 +193,7 @@ def sentence_contains(ent: Span, target: Union[str, Iterable[str]], regex=True) 
 def remove_ent(
     ent: Span,
     i: int,
-    input_type: Literal["ents", "group"] = "ents",
+    input_type = "ents",
     span_group_name: str = "medspacy_spans",
 ):
     """
@@ -217,7 +217,7 @@ def remove_ent(
 def set_label(
     ent,
     i,
-    input_type: Literal["ents", "group"] = "ents",
+    input_type = "ents",
     span_group_name: str = "medspacy_spans",
     **kwargs
 ):
