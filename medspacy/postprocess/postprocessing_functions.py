@@ -1,7 +1,7 @@
 """
 This module contains some simple functions that can be used as action or condition functions for postprocessing rules.
 """
-from typing import Iterable, Union, Literal
+from typing import Iterable, Union
 
 from spacy.tokens import Span
 

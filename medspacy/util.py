@@ -6,7 +6,7 @@ which will be used in many medspaCy components.
 from os import path
 from pathlib import Path
 from sys import platform
-from typing import Union, Literal, Iterable, Optional, Set, Tuple
+from typing import Union, Iterable, Optional, Set, Tuple
 
 import spacy
 from spacy import Language
@@ -32,8 +32,8 @@ ALL_PIPE_NAMES = {
 
 
 def load(
-    model: Union[Literal["default"], str, Language] = "default",
-    medspacy_enable: Union[Literal["all", "default"], Iterable[str]] = "default",
+    model = "default",
+    medspacy_enable = "default",
     medspacy_disable: Optional[Iterable[str]] = None,
     load_rules: bool = True,
     quickumls_path: Optional[str] = None,

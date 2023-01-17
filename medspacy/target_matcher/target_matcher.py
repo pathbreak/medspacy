@@ -1,4 +1,4 @@
-from typing import List, Union, Iterable, Optional, Literal, Set
+from typing import List, Union, Iterable, Optional, Set
 
 from spacy.language import Language
 from spacy.tokens import Doc, Span
@@ -27,7 +27,7 @@ class TargetMatcher:
         name: str = "medspacy_target_matcher",
         rules: Optional[str] = None,
         phrase_matcher_attr: str = "LOWER",
-        result_type: Union[Literal["ents", "group"], None] = "ents",
+        result_type = "ents",
         span_group_name: str = "medspacy_spans",
     ):
         """
@@ -92,7 +92,7 @@ class TargetMatcher:
         return self._result_type
 
     @result_type.setter
-    def result_type(self, result_type: Literal["ents", "group"]):
+    def result_type(self, result_type):
         if not (not result_type or result_type == "group" or result_type == "ents"):
             raise ValueError('result_type must be "ents", "group" or None.')
         self._result_type = result_type

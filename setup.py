@@ -71,5 +71,5 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     package_data={"medspacy": resource_files},
-    python_requires=">=3.8.0",
+    python_requires=">=3.7.0",
 )
